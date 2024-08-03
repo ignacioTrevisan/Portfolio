@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin-top: 20px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
+    width: 320px;
+    font-size: 12px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    margin: 20px auto;
+    animation: enhance-header linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+
+}
+
+.navbarContainer a {
+    cursor: pointer;
+}
+
+@keyframes enhance-header {
+    to {
+        background: rgba(255, 255, 255, .4);
+        backdrop-filter: blur(5px);
+
+
+    }
+}
+
+.selected {
+    color: #1E90FF;
+    transition: color 1s ease-in-out;
+}
+
+.Notselected {
+    color: #333333;
+    transition: color 1s ease-in-out;
+
+}

@@ -1,0 +1,22 @@
+.container {
+    margin-top: 20%;
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20%;
+}
+
+.textContainer {
+    width: 70%;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}

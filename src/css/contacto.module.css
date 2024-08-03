@@ -1,0 +1,23 @@
+.container {
+    margin-top: 10%;
+    width: 100%;
+    background: rgba(255, 255, 255);
+    border-radius: 25px;
+
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon_link {
+    color: #333333;
+    font-size: 24px;
+    text-decoration: none;
+    /* Elimina el subrayado */
+}
+
+.icon_link:hover {
+    color: #FFC107;
+    /* Color negro más oscuro al pasar el mouse */
+}
