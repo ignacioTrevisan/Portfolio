@@ -50,33 +50,19 @@ export const Proyecto = ({ titulo, descripcion, imagenes, iconos = [], repo, url
 
     return (
         <div className={styles.proyectoContainer}>
-            <div style={{ height: '100%', position: 'absolute', minWidth: width, display: `${paginacion > 0 ? 'flex' : 'none'}`, flexDirection: 'column', justifyContent: 'center' }}>
-
-                <IconButton sx={{ color: 'black', position: 'absolute', left: '10px', zIndex: '4' }} onClick={scrollIzquierda}>
-                    <ArrowBackIosNew className='flechas' sx={{ fontSize: { lg: '90px', md: '60px', sm: '30px', xs: '15px' }, zIndex: '90', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%' }} />
-                </IconButton>
-            </div>
             <div className={styles.izquierda} ref={izquierdaRef}>
+
                 {imagenes.map((i) => (
                     <div className={styles.izquierdaAdentro} ref={izquierdaAdentroRef} style={{ minWidth: width }}>
                         <img src={i} />
                     </div>
                 ))}
             </div>
-            {
-                paginacion < imagenes.length - 1 &&
-                <div style={{ height: '100%', position: 'absolute', minWidth: width, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    <IconButton sx={{ color: '#333', position: 'absolute', right: '40px' }} onClick={scrollDerecha}>
-                        <ArrowForwardIos className='flechas' sx={{ fontSize: { lg: '90px', md: '60px', sm: '30px', xs: '15px' }, color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', borderRadius: '50%' }} />
-                    </IconButton>
-
-                </div>
-            }
             <div className={styles.derecha}>
                 <div className={styles.texto}>
                     <h1>{titulo}</h1>
                     <p>{descripcion}</p>
-                    <div style={{ position: 'absoute', bottom: '20px', width: '100%', display: 'flex', justifyContent: 'center' }}>
+                    <div style={{ position: 'absoute', bottom: 0, width: '100%', display: 'flex', justifyContent: 'center' }}>
                         {
                             repo &&
                             <IconButton

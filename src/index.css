@@ -26,3 +26,23 @@ body {
   flex: 1;
   /* Para llenar el espacio disponible */
 }
+
+@media (max-width: 900px) {
+  .content-container {
+
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    flex: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .content-container {
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+    flex: 1;
+  }
+}
