@@ -9,7 +9,7 @@
 }
 
 .proyectoContainer {
-    top: -10px;
+
     height: 300px;
     border-radius: 20px;
     padding: 0;
@@ -22,7 +22,7 @@
 }
 
 .izquierda {
-    width: 40%;
+    width: 20%;
     height: 100%;
     display: flex;
     overflow-x: auto;
@@ -31,8 +31,6 @@
     position: relative;
     top: 0;
     left: 0;
-    transition: width 0.5s ease;
-
 }
 
 .izquierda::-webkit-scrollbar {
@@ -54,10 +52,10 @@
 .derecha {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 80%;
     background-color: #E0F7FA;
     min-height: 100%;
-    transition: width 0.5s ease;
+
     box-sizing: border-box;
     margin: 0;
     position: relative;

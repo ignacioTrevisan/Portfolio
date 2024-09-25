@@ -27,7 +27,18 @@ export const Proyectos = () => {
     return (
         <div className={styles.container}>
             {proyecto.length > 0 && proyecto.map((p) =>
-                <Proyecto titulo={p.Titulo} imagenes={p.Imagenes} descripcion={p.Descripcion} iconos={p.iconos} repo={p.repo} url={p.url} />
+                <Proyecto
+                    titulo={p.Titulo}
+                    imagenes={p.Imagenes}
+                    descripcion={p.Descripcion}
+                    iconos={p.iconos}
+                    repo={p.repo}
+                    url={p.url}
+                    isNative={p.isNative}
+                    ReactNativaCap={p.ReactNativaCap ?? []}
+                    ReactNaviteDesc={p.DescripcionRn ?? ''}
+                    rnIcons={p.rnIcons ?? []}
+                />
             )}
 
         </div>
