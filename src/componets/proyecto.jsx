@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-export const Proyecto = ({ titulo, descripcion, imagenes, iconos = [], repo, url, ReactNativaCap = [], isNative = false, ReactNaviteDesc = '', rnIcons = [] }) => {
+export const Proyecto = ({ titulo, descripcion, onlyNative, imagenes, iconos = [], repo, url, ReactNativaCap = [], isNative = false, ReactNaviteDesc = '', rnIcons = [] }) => {
     const [isNaviteSelected, setIsNaviteSelected] = useState(false);
     const [icon, setIcon] = useState([])
     const screenWidth = window.innerWidth;
@@ -22,7 +22,7 @@ export const Proyecto = ({ titulo, descripcion, imagenes, iconos = [], repo, url
             const resultado = rnIcons.map(item => item.split('|'));
             setIcon(resultado);
         }
-        if (isNaviteSelected) {
+        if (isNaviteSelected || onlyNative) {
             if (screenWidth > 900) {
                 setWidth({ izquierda: 20, derecha: 80 });
             } else {

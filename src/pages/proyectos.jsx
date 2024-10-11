@@ -14,7 +14,9 @@ export const Proyectos = () => {
         docs.forEach(doc => {
             proyectos.push({ ...doc.data(), id: doc.id });
         })
-        setProyecto(proyectos)
+        const orderArray = [proyectos[1], proyectos[0], proyectos[2]];
+
+        setProyecto(orderArray)
     }
     useEffect(() => {
         getProyectos();
@@ -35,6 +37,7 @@ export const Proyectos = () => {
                     repo={p.repo}
                     url={p.url}
                     isNative={p.isNative}
+                    onlyNative={p.onlyNative}
                     ReactNativaCap={p.ReactNativaCap ?? []}
                     ReactNaviteDesc={p.DescripcionRn ?? ''}
                     rnIcons={p.rnIcons ?? []}
