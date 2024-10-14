@@ -41,6 +41,7 @@ export const Proyectos = () => {
                     ReactNativaCap={p.ReactNativaCap ?? []}
                     ReactNaviteDesc={p.DescripcionRn ?? ''}
                     rnIcons={p.rnIcons ?? []}
+                    download={p.download && p.download}
                 />
             )}
 

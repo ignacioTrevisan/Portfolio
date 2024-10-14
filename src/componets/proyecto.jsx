@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from '../css/proyectos.module.css'
 import { IconButton } from '@mui/material';
-import { GitHub, Launch } from '@mui/icons-material';
+import { Download, DownloadDone, GitHub, Launch } from '@mui/icons-material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-export const Proyecto = ({ titulo, descripcion, onlyNative, imagenes, iconos = [], repo, url, ReactNativaCap = [], isNative = false, ReactNaviteDesc = '', rnIcons = [] }) => {
+export const Proyecto = ({ titulo, download, descripcion, onlyNative, imagenes, iconos = [], repo, url, ReactNativaCap = [], isNative = false, ReactNaviteDesc = '', rnIcons = [] }) => {
     const [isNaviteSelected, setIsNaviteSelected] = useState(false);
     const [icon, setIcon] = useState([])
     const screenWidth = window.innerWidth;
@@ -78,7 +78,7 @@ export const Proyecto = ({ titulo, descripcion, onlyNative, imagenes, iconos = [
                     <div className={styles.texto}>
                         <h1>{titulo}</h1>
                         <p>{isNaviteSelected ? ReactNaviteDesc : descripcion}</p>
-                        <div style={{ position: 'absoute', bottom: 0, width: '100%', display: 'flex', justifyContent: 'center' }}>
+                        <div style={{ position: 'absoute', bottom: 0, width: '100%', display: 'flex', justifyContent: 'center', paddingBottom: '20px' }}>
                             {
                                 repo &&
                                 <IconButton
@@ -102,6 +102,18 @@ export const Proyecto = ({ titulo, descripcion, onlyNative, imagenes, iconos = [
                                     sx={{ color: 'black' }}
                                 >
                                     <Launch sx={{ fontSize: 20 }} />
+                                </IconButton>
+                            }
+                            {
+                                download &&
+                                <IconButton
+                                    component="a"
+                                    href={download}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    sx={{ color: 'black' }}
+                                >
+                                    <Download sx={{ fontSize: 20 }} />
                                 </IconButton>
                             }
                         </div>
