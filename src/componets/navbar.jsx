@@ -33,7 +33,7 @@ export const Navbar = () => {
                     component="a"
                     href="#Inicio"
                     rel="noopener noreferrer"
-                    sx={{ color: 'black', fontSize: '16px' }}
+                    sx={{ color: 'black', fontSize: '24px' }}
                 >
 
                     <FaHome className={activeSection === 'Inicio' ? styles.selected : ''} />

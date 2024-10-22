@@ -119,20 +119,33 @@ export const Proyecto = ({ titulo, download, descripcion, onlyNative, imagenes, 
                         </div>
 
                     </div>
+                    {/* <div className={styles.fondoTecnologia}> */}
+
+
                     <div className={styles.tecnologias}>
-                        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', overflowX: 'auto', alignItems: 'center', gap: '5%', color: '#333333' }}>
+                        <div
+                            style={{
+                                width: '100%',
+                                display: 'flex',
+                                justifyContent: 'start',
+                                overflowX: 'auto',
+                                alignItems: 'center',
+                                gap: '5%',
+                                color: '#333333',
+
+                            }}>
 
                             {icon.length > 0 && icon.map((i, index) =>
-                                <div key={i[0] + index} style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                                <div key={i[0] + index} style={{ display: 'flex', alignItems: 'start', flexDirection: 'column', justifyContent: 'start', overflowx: 'scroll', width: '400px' }}>
                                     <img src={i[1]} width='20px' alt={i[0]} />
-                                    <p>{i[0]}</p>
+                                    <p style={{ fontSize: '14px' }}>{i[0]}</p>
                                 </div>
                             )
                             }
 
                         </div>
                     </div>
-
+                    {/* </div> */}
 
                 </div>
             </div >
