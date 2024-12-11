@@ -65,9 +65,9 @@ export const Proyecto = ({ titulo, download, descripcion, onlyNative, imagenes, 
                 <div className={styles.izquierda} style={{ width: `${width.izquierda}%` }} ref={izquierdaRef}>
 
                     {isNaviteSelected ? (
-                        <SwiperComponent images={ReactNativaCap} />
+                        <SwiperComponent images={ReactNativaCap} isNative={true} />
                     ) : (
-                        <SwiperComponent images={imagenes} />
+                        <SwiperComponent images={imagenes} isNative={onlyNative ? true : false} />
                     )}
 
 
@@ -156,11 +156,12 @@ export const Proyecto = ({ titulo, download, descripcion, onlyNative, imagenes, 
 }
 
 
-const SwiperComponent = ({ images }) => (
+const SwiperComponent = ({ images, isNative }) => (
     <Swiper spaceBetween={50} slidesPerView={1}>
         {images.map((img, index) => (
             <SwiperSlide key={index}>
-                <img src={img} alt="Imagen" style={{ objectFit: 'contain' }} />
+
+                <img src={img} alt="Imagen" style={{ objectFit: 'contain' }} width={1080} height={720} quality={100} />
             </SwiperSlide>
         ))}
     </Swiper>

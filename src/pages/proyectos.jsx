@@ -14,7 +14,7 @@ export const Proyectos = () => {
         docs.forEach(doc => {
             proyectos.push({ ...doc.data(), id: doc.id });
         })
-        const orderArray = [proyectos[1], proyectos[0], proyectos[2]];
+        const orderArray = [proyectos[1], proyectos[0], proyectos[2], proyectos[3]];
 
         setProyecto(orderArray)
     }
