@@ -1,12 +1,12 @@
 import styles from '../css/sobreMi.module.css'
-import imagen from '../assets/imagen.jpg'
+import Captura from '../assets/Captura.png'
 
 export const Inicio = () => {
     const screenWidth = window.innerWidth;
     return (
         <div className={styles.container} >
-            <div className={styles.imageContainer} style={{ minWidth: screenWidth < 600 ? '100%' : '200px', maxWidth: screenWidth < 600 ? '100%' : '200px' }}>
-                <img src={imagen} />
+            <div className={styles.imageContainer} style={{ minWidth: screenWidth < 600 ? '100%' : '200px', maxWidth: screenWidth < 600 ? '100%' : '200px', objectFit: 'contain' }}>
+                <img src={Captura} width="1800" height="5300" />
             </div>
             <div style={{ maxWidth: screenWidth > 600 ? '60%' : '100%' }}>
                 <h1> <span style={{ color: '#1E90FF' }}>¡Hola!</span> Me llamo Ignacio Trevisan</h1>
